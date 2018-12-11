@@ -49,8 +49,11 @@ public class Brick : MonoBehaviour {
 		//Debug.Log("Globals.totpoints >>" +Globals.points);
 		if (Globals.totpoints > Globals.points) {
 			Globals.points++;
+			if (PlayerPrefs.GetInt ("bestscore") < Globals.points) {
+				PlayerPrefs.SetInt ("bestscore", Globals.points);
+			}
 			GameController._instance.scoreTxt.text = Globals.points.ToString ();
-			GameController._instance.scorePanel_scoretxt.text = Globals.points.ToString ();
+			GameController._instance.scorePanel_scoretxt.text = PlayerPrefs.GetInt ("bestscore").ToString ();
 			Destroy (gameObject);
 			Resources.UnloadUnusedAssets ();
 			//Debug.Log ("Points:" + Globals.points);

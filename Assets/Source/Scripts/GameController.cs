@@ -26,8 +26,9 @@ public class GameController : MonoBehaviour {
 	public static GameController _instance;
 	void Start () {
 		_instance = this;
-		upperRowPanel.transform.position = new Vector3 (0f, -1.72f, 4f);
-		lowerRowPanel.transform.position = new Vector3 (0f, 0.62f, 4f);
+		scorePanel_scoretxt.text = PlayerPrefs.GetInt ("bestscore").ToString ();
+		//upperRowPanel.transform.position = new Vector3 (0f, -1.72f, 4f);
+		//lowerRowPanel.transform.position = new Vector3 (0f, 1.5f, 4f);
 	}
 	public void click_restart(){
 		upperRowPanel.GetComponent<BrickManager> ().Reinit ();
@@ -39,10 +40,12 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void click_gameTap(){
+		click_restart ();
 		Time.timeScale = 1;
 		ball1.GetComponent<Ball>().gameInit ();
 		//ball2.GetComponent<Ball>().gameInit ();
 		gameTapArea.SetActive (false);
+
 		//GameController._instance.paddleObj.transform.localPosition = new Vector2 (paddleObj.transform.localPosition.x + 0.25f, paddleObj.transform.localPosition.y);
 	}
 }

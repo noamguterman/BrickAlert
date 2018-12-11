@@ -40,6 +40,12 @@ public class BrickManager : MonoBehaviour {
 		if (isGenarate == false || Globals.isClockStarted || !Globals.gameStarted) {
 			return;
 		}
+		if (direction == fromDirection.UpperDirecter) { 
+			transform.Translate (Vector3.up * Time.deltaTime * sppedBrick);
+		} else {
+			transform.Translate (Vector3.down * Time.deltaTime * sppedBrick);
+		}
+
 		rowSpawn ();
 		isGenarate = false;
 		insertRow ();
@@ -48,12 +54,7 @@ public class BrickManager : MonoBehaviour {
 		
 		//Debug.Log ("--------------->>>");
 
-		if (direction == fromDirection.UpperDirecter) { 
-			transform.Translate (Vector3.up * Time.deltaTime * sppedBrick);
-		} else {
-			transform.Translate (Vector3.down * Time.deltaTime * sppedBrick);
-		}
-
+	
 		//Debug.Log (isGenarate);
 		if (direction == fromDirection.UpperDirecter) { 
 			obj.transform.localPosition -= incrTemp;
