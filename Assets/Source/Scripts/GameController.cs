@@ -20,11 +20,16 @@ public class GameController : MonoBehaviour {
 	public GameObject wall;
 	public GameObject ballprefab;
 	public GameObject paddleObj;
-
+	public Camera cam;
 
 	// Use this for initialization
 	public static GameController _instance;
 	void Start () {
+		print(Screen.width +":"+ Screen.height);
+		string reso = Screen.width.ToString () + "x" + Screen.height.ToString ();
+			if(reso == "1080x1920"){
+				cam.orthographicSize = 5.37f;
+			}
 		_instance = this;
 		scorePanel_scoretxt.text = PlayerPrefs.GetInt ("bestscore").ToString ();
 		//upperRowPanel.transform.position = new Vector3 (0f, -1.72f, 4f);
@@ -47,5 +52,13 @@ public class GameController : MonoBehaviour {
 		gameTapArea.SetActive (false);
 
 		//GameController._instance.paddleObj.transform.localPosition = new Vector2 (paddleObj.transform.localPosition.x + 0.25f, paddleObj.transform.localPosition.y);
+	}
+	public void GameStop(){
+		Time.timeScale = 0;
+		GameController._instance.scorePanel.SetActive (true);
+		GameController._instance.gameTapArea.SetActive (true);
+		GameController._instance.ball1.GetComponent<Ball>().hasStarted = false;
+		GameController._instance.ball2.GetComponent<Ball>().hasStarted = false;
+		Globals.gameStarted = false;
 	}
 }

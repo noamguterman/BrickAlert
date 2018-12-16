@@ -24,13 +24,9 @@ public class Brick : MonoBehaviour {
 		//levelManager = GameObject.FindObjectOfType<LevelManager>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 	
 	void OnCollisionEnter2D (Collision2D col) {
-		//Debug.Log ("---->>" + col.gameObject.name);
 		//AudioSource.PlayClipAtPoint (crack, transform.position, 0.8f);
 		if (col.gameObject.tag == "Ball") {
 			HandleHits();
@@ -58,12 +54,7 @@ public class Brick : MonoBehaviour {
 			Resources.UnloadUnusedAssets ();
 			//Debug.Log ("Points:" + Globals.points);
 		} else {
-			Time.timeScale = 0;
-			GameController._instance.scorePanel.SetActive (true);
-			GameController._instance.gameTapArea.SetActive (true);
-			GameController._instance.ball1.GetComponent<Ball>().hasStarted = false;
-			GameController._instance.ball2.GetComponent<Ball>().hasStarted = false;
-			Globals.gameStarted = false;
+			GameController._instance.GameStop ();
 
 		}
 		///} else {

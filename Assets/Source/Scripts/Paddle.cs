@@ -14,8 +14,13 @@ public class Paddle : MonoBehaviour {
 		paddlePos = gameObject.transform.position;
 		ball = GameObject.FindObjectOfType<Ball>();
 	}
-		
+	//void OnTriggerEnter2D (Collider2D col) {
+		//Debug.Log ("--test2-->>" + col.gameObject.name);
+		//GameController._instance.GameStop ();
+		//AudioSource.PlayClipAtPoint (crack, transform.position, 0.8f);
+	//}
 	// Update is called once per frame
+
 	void Update () {
 		if (!autoPlay) {
 			MoveWithMouse();
@@ -30,15 +35,22 @@ public class Paddle : MonoBehaviour {
 		paddlePos.x = Mathf.Clamp(ballPos.x, minX, maxX);
 		this.transform.position = paddlePos;
 	}
-	
+	void Mousemove(){
+		Debug.Log ("move.......");
+	}
 	void MoveWithMouse () {
 		if (Globals.gameStarted) {
-			Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
-			float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
+			var mousePos = Input.mousePosition; 
+			var wantedPos = Camera.main.ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, 10)); 
+			if (wantedPos.x > 6.69f && wantedPos.x < 9.32f) {
+				transform.position = new Vector3 (wantedPos.x, paddlePos.y, 0); 
+			}
+			/*Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
+			float mousePosInBlocks = Input.mousePosition.x / Screen.width * 10;
 			if (Mathf.Clamp (mousePosInBlocks, minX, maxX) > 6.20f && Mathf.Clamp (mousePosInBlocks, minX, maxX) < 9.6f) {
 				paddlePos.x = Mathf.Clamp (mousePosInBlocks, minX, maxX);
 				this.transform.position = paddlePos;
-			}
+			}*/
 		}
 	}
 	//======================================arun ================================

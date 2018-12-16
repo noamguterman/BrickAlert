@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour {
 	private Paddle paddle;
 	public bool hasStarted = false;
 	private Vector3 paddleToBallVector;
-	private Vector2 ballSpeed = new Vector2 (1f, 8f);
+	private Vector2 ballSpeed = new Vector2 (1f, 6f);
 	public static Ball _instance;
 	public Vector3 ballpos;
 	// Use this for initialization
@@ -50,7 +50,7 @@ public class Ball : MonoBehaviour {
 		if (collision.gameObject.tag == "Ball")
 			return;
 		
-		Vector2 tweak = new Vector2 (Random.Range(0f, 0.2f), Random.Range(0f, 0.2f));
+		Vector2 tweak = new Vector2 (Random.Range(0.1f, 0.2f), Random.Range(0.1f, 0.2f));
 		
 		if (hasStarted) {	
 			///GetComponent<AudioSource>().Play();

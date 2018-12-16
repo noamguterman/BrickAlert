@@ -10,6 +10,7 @@ TagManager:
   - BreakableGreen
   - Ball
   - Paddle
+  - HitObj
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - GameLayer
   - Ball
-  - 
+  - HitObj
   - 
   - 
   - 
