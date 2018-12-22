@@ -3439,6 +3439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d116edc6696cae04a91b50de34872c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brustFab: {fileID: 1855863626683366, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
   ball1: {fileID: 1629517880}
   ball2: {fileID: 710081681}
   scorePanel: {fileID: 1733943127}
@@ -3705,6 +3706,52 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1301359874
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.545284
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.9486046
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845379836634606, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855863626683366, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1306918463
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour {
 	private Paddle paddle;
 	public bool hasStarted = false;
 	private Vector3 paddleToBallVector;
-	private Vector2 ballSpeed = new Vector2 (1f, 6f);
+	private Vector2 ballSpeed = new Vector2 (1f, 7f);
 	public static Ball _instance;
 	public Vector3 ballpos;
 	// Use this for initialization

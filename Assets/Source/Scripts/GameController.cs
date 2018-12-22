@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+	public GameObject brustFab;
 	public GameObject ball1;
 	public GameObject ball2;
 	public GameObject scorePanel;

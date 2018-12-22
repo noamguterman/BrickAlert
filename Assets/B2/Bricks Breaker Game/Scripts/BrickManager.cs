@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BrickManager : MonoBehaviour {
-	float sppedBrick = 6f;
+	float sppedBrick = 0.07f;
 	public GameObject brickRow;
 	Vector3 incrTemp = new Vector3(0,0.35f,0);
 	public Vector3 temp;
 	float rowGenarateInterval = 3f;
-	float rowMoveInterval = 1.5f;
+	float rowMoveInterval = .02f;
 	GameObject obj;
 	Vector2 xy;
 	bool isGenarate = true;

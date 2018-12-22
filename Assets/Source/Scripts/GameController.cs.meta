@@ -1,11 +1,26 @@
 fileFormatVersion: 2
 guid: d116edc6696cae04a91b50de34872c3b
-timeCreated: 1543376462
-licenseType: Pro
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - brustFab: {fileID: 1855863626683366, guid: 6e50826f0c986e749a7b05633aa3185e, type: 2}
+  - ball1: {instanceID: 0}
+  - ball2: {instanceID: 0}
+  - scorePanel: {instanceID: 0}
+  - scorePanel_scoretxt: {instanceID: 0}
+  - scoreTxt: {instanceID: 0}
+  - upperRowPanel: {instanceID: 0}
+  - lowerRowPanel: {instanceID: 0}
+  - clockBtn: {instanceID: 0}
+  - ballSpeedUpBtn: {instanceID: 0}
+  - addBallBtn: {instanceID: 0}
+  - wallExtenderBtn: {instanceID: 0}
+  - gameTapArea: {instanceID: 0}
+  - wall: {instanceID: 0}
+  - ballprefab: {instanceID: 0}
+  - paddleObj: {instanceID: 0}
+  - cam: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

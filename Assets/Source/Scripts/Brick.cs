@@ -29,6 +29,8 @@ public class Brick : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col) {
 		//AudioSource.PlayClipAtPoint (crack, transform.position, 0.8f);
 		if (col.gameObject.tag == "Ball") {
+			GameObject obj = Instantiate (GameController._instance.brustFab);
+			obj.transform.localPosition =  gameObject.transform.position;
 			HandleHits();
 		}
 
